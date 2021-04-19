@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PokemonInfo">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/type2b"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="10dp"
+                    android:adjustViewBounds="false"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="centerInside"
+                    app:layout_constraintEnd_toEndOf="@+id/pokename"
+                    app:layout_constraintTop_toBottomOf="@+id/speciest" />
+
+                <ImageButton
+                    android:id="@+id/type1b"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/gen1"
+                    app:layout_constraintEnd_toStartOf="@+id/type2b"
+                    app:layout_constraintTop_toTopOf="@+id/type2b" />
+
+                <ImageView
+                    android:id="@+id/pokepic"
+                    android:layout_width="0dp"
+                    android:layout_height="300dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/pokemon_imageloading" />
+
+                <ImageButton
+                    android:id="@+id/backb"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/back"
+                    app:layout_constraintStart_toStartOf="@+id/pokepic"
+                    app:layout_constraintTop_toTopOf="@+id/pokepic" />
+
+                <TextView
+                    android:id="@+id/pokename"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:fontFamily="@font/pokemon_solid"
+                    android:letterSpacing="0.2"
+                    android:maxHeight="75dp"
+                    android:maxLines="1"
+                    android:text="Pokemon"
+                    android:textAlignment="textEnd"
+                    android:textSize="40sp"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="@+id/favb"
+                    app:layout_constraintEnd_toEndOf="@+id/pokepic"
+                    app:layout_constraintStart_toEndOf="@+id/favb"
+                    app:layout_constraintTop_toTopOf="@+id/favb" />
+
+                <TextView
+                    android:id="@+id/evotitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/pokemon_solid"
+                    android:letterSpacing="0.2"
+                    android:maxHeight="75dp"
+                    android:text="Evolution Chain\n(Towards Right)"
+                    android:textAlignment="center"
+                    android:textSize="24sp"
+                    android:visibility="gone"
+                    app:autoSizeTextType="none"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/statst" />
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:fontFamily="@font/pokemon_solid"
+                    android:letterSpacing="0.2"
+                    android:maxHeight="75dp"
+                    android:maxLines="1"
+                    android:text="A product of VSSVe - Made with PokeAPI"
+                    android:textAlignment="center"
+                    android:textSize="40sp"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toTopOf="@+id/textView10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/pokeload"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:letterSpacing="0.2"
+                    android:maxHeight="75dp"
+                    android:maxLines="1"
+                    android:text="Made with ❤️ for Delta Force"
+                    android:textAlignment="center"
+                    android:textSize="40sp"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/type1t"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/pokemon_solid"
+                    android:letterSpacing="0.2"
+                    android:maxHeight="75dp"
+                    android:maxLines="1"
+                    android:text="Water"
+                    android:textAlignment="center"
+                    android:textSize="40sp"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintEnd_toEndOf="@+id/type1b"
+                    app:layout_constraintStart_toStartOf="@+id/type1b"
+                    app:layout_constraintTop_toBottomOf="@+id/type1b" />
+
+                <TextView
+                    android:id="@+id/type2t"
+                    android:layout_width="0dp"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/pokemon_solid"
+                    android:letterSpacing="0.2"
+                    android:maxHeight="75dp"
+                    android:maxLines="1"
+                    android:text="Water"
+                    android:textAlignment="center"
+                    android:textSize="40sp"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintEnd_toEndOf="@+id/type2b"
+                    app:layout_constraintStart_toStartOf="@+id/type2b"
+                    app:layout_constraintTop_toBottomOf="@+id/type1b" />
+
+                <ImageButton
+                    android:id="@+id/shareb"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginTop="10dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/share"
+                    app:layout_constraintStart_toStartOf="@+id/pokepic"
+                    app:layout_constraintTop_toBottomOf="@+id/pokepic" />
+
+                <ImageButton
+                    android:id="@+id/genbi"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginEnd="1dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/gen1"
+                    app:layout_constraintBottom_toBottomOf="@+id/pokepic"
+                    app:layout_constraintEnd_toEndOf="@+id/pokepic" />
+
+                <ImageButton
+                    android:id="@+id/favb"
+                    android:layout_width="75dp"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="10dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:scaleType="centerInside"
+                    app:layout_constraintBottom_toBottomOf="@+id/shareb"
+                    app:layout_constraintStart_toEndOf="@+id/shareb"
+                    app:layout_constraintTop_toTopOf="@+id/shareb" />
+
+                <TextView
+                    android:id="@+id/statst"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/pokemon_solid"
+                    android:letterSpacing="0.1"
+                    android:minHeight="0dp"
+                    android:text="Stats\n\nHP : 100\nAttack : 100\nDef\nHP : 100\nAttack : 100\nDef"
+                    android:textAlignment="viewStart"
+                    android:textSize="20sp"
+                    app:autoSizeTextType="none"
+                    app:layout_constraintEnd_toStartOf="@+id/type1b"
+                    app:layout_constraintStart_toStartOf="@+id/dimt"
+                    app:layout_constraintTop_toBottomOf="@+id/dimt" />
+
+                <TextView
+                    android:id="@+id/posabt"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/pokemon_solid"
+                    android:letterSpacing="0.1"
+                    android:text="Possible Abilities\nA\nB"
+                    android:textAlignment="viewStart"
+                    android:textSize="16sp"
+                    app:autoSizeMaxTextSize="20sp"
+                    app:autoSizeMinTextSize="10sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintBottom_toBottomOf="@+id/statst"
+                    app:layout_constraintEnd_toEndOf="@+id/type2b"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/statst"
+                    app:layout_constraintTop_toBottomOf="@+id/type2t" />
+
+                <TextView
+                    android:id="@+id/speciest"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/pokemon_solid"
+                    android:letterSpacing="0.1"
+                    android:text="(species)"
+                    android:textAlignment="viewEnd"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toEndOf="@+id/type2b"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/type1b"
+                    app:layout_constraintTop_toBottomOf="@+id/pokename" />
+
+                <TextView
+                    android:id="@+id/dimt"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/pokemon_solid"
+                    android:letterSpacing="0.1"
+                    android:text="Weight : 10 hg\nHeight : 10dm"
+                    android:textAlignment="viewStart"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/speciest"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/shareb"
+                    app:layout_constraintTop_toBottomOf="@+id/pokename" />
+
+                <HorizontalScrollView
+                    android:id="@+id/evoview"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="visible"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/evotitle">
+
+                    <LinearLayout
+                        android:id="@+id/evoobject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center|center_vertical"
+                        android:orientation="horizontal" />
+                </HorizontalScrollView>
+
+                <ProgressBar
+                    android:id="@+id/pokeload"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/evoview" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/pokeconnection"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:background="@android:color/black"
+        android:maxHeight="75dp"
+        android:maxLines="1"
+        android:text="Connected"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        app:autoSizeMaxTextSize="100sp"
+        app:autoSizeMinTextSize="10sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/scrollView3"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

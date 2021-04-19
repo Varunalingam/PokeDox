@@ -1,0 +1,26 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="Shadow">#5A5A5A</item>
+        <item name="Foreground">@color/White</item>
+        <item name="Background">@color/Black</item>
+        <item name="Accent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/Black</item>
+        <item name="android:textColorHint">@color/colorAccent</item>
+    </style>
+
+    <style name="NavItemTextApperance" parent="@android:style/TextAppearance.Medium">
+        <item name="android:fontFamily">@font/pokemon_solid</item>
+        <item name="android:textColor">@color/White</item>
+    </style>
+
+        <attr name="Background" format="color"></attr>
+        <attr name="Foreground" format="color"></attr>
+        <attr name="Shadow" format="color"></attr>
+    <attr name="Accent" format="color"></attr>
+</resources>
